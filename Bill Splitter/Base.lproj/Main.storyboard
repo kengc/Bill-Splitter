@@ -66,6 +66,11 @@
                             <constraint firstItem="f6G-bk-t6e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zx4-Sa-5D7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelDividedAmount" destination="Txh-rZ-Xj1" id="NVR-6i-ccR"/>
+                        <outlet property="sliderPeople" destination="5KD-9q-tkb" id="1aL-SW-O4f"/>
+                        <outlet property="textBillTotal" destination="f6G-bk-t6e" id="Ic3-fH-mtO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

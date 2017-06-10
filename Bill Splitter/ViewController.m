@@ -9,6 +9,10 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textBillTotal;
+@property (weak, nonatomic) IBOutlet UISlider *sliderPeople;
+@property (weak, nonatomic) IBOutlet UILabel *labelDividedAmount;
+
 
 @end
 

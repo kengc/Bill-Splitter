@@ -14,6 +14,7 @@
 		7374BA9E1EECA776002D2515 /* Bill_Splitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7374BA9C1EECA776002D2515 /* Bill_Splitter.xcdatamodeld */; };
 		7374BAA01EECA776002D2515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7374BA9F1EECA776002D2515 /* Assets.xcassets */; };
 		7374BAA31EECA776002D2515 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7374BAA11EECA776002D2515 /* LaunchScreen.storyboard */; };
+		7374BAB51EECD46A002D2515 /* CalculateSplitBill.m in Sources */ = {isa = PBXBuildFile; fileRef = 7374BAB41EECD46A002D2515 /* CalculateSplitBill.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		7374BA9F1EECA776002D2515 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7374BAA21EECA776002D2515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7374BAA41EECA776002D2515 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7374BAB31EECD46A002D2515 /* CalculateSplitBill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateSplitBill.h; sourceTree = "<group>"; };
+		7374BAB41EECD46A002D2515 /* CalculateSplitBill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateSplitBill.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				7374BA961EECA776002D2515 /* ViewController.h */,
 				7374BA971EECA776002D2515 /* ViewController.m */,
 				7374BA991EECA776002D2515 /* Main.storyboard */,
+				7374BAB31EECD46A002D2515 /* CalculateSplitBill.h */,
+				7374BAB41EECD46A002D2515 /* CalculateSplitBill.m */,
 				7374BA9F1EECA776002D2515 /* Assets.xcassets */,
 				7374BAA11EECA776002D2515 /* LaunchScreen.storyboard */,
 				7374BAA41EECA776002D2515 /* Info.plist */,
@@ -156,6 +161,7 @@
 				7374BA981EECA776002D2515 /* ViewController.m in Sources */,
 				7374BA951EECA776002D2515 /* AppDelegate.m in Sources */,
 				7374BA921EECA776002D2515 /* main.m in Sources */,
+				7374BAB51EECD46A002D2515 /* CalculateSplitBill.m in Sources */,
 				7374BA9E1EECA776002D2515 /* Bill_Splitter.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

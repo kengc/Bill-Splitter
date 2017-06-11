@@ -7,12 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "CalculateSplitBill.h"
+
+
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *textBillTotal;
+
 @property (weak, nonatomic) IBOutlet UISlider *sliderPeople;
 @property (weak, nonatomic) IBOutlet UILabel *labelDividedAmount;
 @property (weak, nonatomic) IBOutlet UILabel *labelNumberofPeople;
+
+@property (weak, nonatomic) IBOutlet UITextField *textBillTotal;
+@property (nonatomic) CalculateSplitBill *calculateBill;
 
 
 @end
@@ -22,6 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.textBillTotal.delegate = self;
+    _calculateBill = [[CalculateSplitBill alloc] init];
+
 }
 
 
@@ -34,18 +44,24 @@
     /// diplay num of people from slider
     _labelNumberofPeople.text = [NSString stringWithFormat:@"%0.f", self.sliderPeople.value];
     
-    /// Calculate slplite bill amount
-    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
-    [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-    long bAmt = [self.textBillTotal.text integerValue];
-    long splitbill = (bAmt / self.sliderPeople.value);
     
-    NSNumber *billAmt = [[NSNumber alloc] initWithLong:splitbill];
-    self.labelDividedAmount.text = [numberFormatter stringFromNumber:billAmt];
+//    self.labelDividedAmount.text = [self.delegate CalculateSplitBillWithAmount:self.textBillTotal.text andPeople:self.sliderPeople.value];
     
-    
+    self.labelDividedAmount.text = [self.calculateBill CalculateSplitBillWithAmount:self.textBillTotal.text andPeople:self.sliderPeople.value];
     
 }
+- (IBAction)btnCalculateSpltAmount:(UIButton *)sender {
+    
+    //copied code from here to above
+}
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    _labelNumberofPeople.text = [NSString stringWithFormat:@"%0.f", self.sliderPeople.value];
+    
+    self.labelDividedAmount.text = [self.calculateBill CalculateSplitBillWithAmount:textField.text andPeople:self.sliderPeople.value];
+    
+    return YES;
+}
 
 @end

@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6G-bk-t6e">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6G-bk-t6e" customClass="Cal">
                                 <rect key="frame" x="16" y="28" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="OWr-xo-gA3"/>
@@ -31,7 +31,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="5KD-9q-tkb">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="5KD-9q-tkb">
                                 <rect key="frame" x="14" y="111" width="347" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="BZs-hy-Q15"/>
@@ -46,6 +46,9 @@
                                     <constraint firstAttribute="height" constant="30" id="zI3-xI-eG8"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnCalculateSpltAmount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AQR-bW-Fzy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txh-rZ-Xj1">
                                 <rect key="frame" x="16" y="225" width="343" height="21"/>
@@ -91,7 +94,7 @@
                         <outlet property="labelDividedAmount" destination="Txh-rZ-Xj1" id="NVR-6i-ccR"/>
                         <outlet property="labelNumberofPeople" destination="Oam-gk-cd5" id="UBe-Xi-ACJ"/>
                         <outlet property="sliderPeople" destination="5KD-9q-tkb" id="1aL-SW-O4f"/>
-                        <outlet property="textBillTotal" destination="f6G-bk-t6e" id="Ic3-fH-mtO"/>
+                        <outlet property="textBillTotal" destination="f6G-bk-t6e" id="0vu-Pv-gOd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

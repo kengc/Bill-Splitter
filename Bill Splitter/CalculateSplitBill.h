@@ -1,22 +1,19 @@
 //
-//  ViewController.h
+//  CalculateSplitBill.h
 //  Bill Splitter
 //
 //  Created by Kevin Cleathero on 2017-06-10.
 //  Copyright © 2017 Kevin Cleathero. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@protocol ViewControllerCalcDelegate <NSObject>
+@interface CalculateSplitBill : NSObject
 
 -(NSString *)CalculateSplitBillWithAmount:(NSString *)billAmount andPeople:(double)people;
 
-@end
+//@property (nonatomic) ViewController *vc;
 
-@interface ViewController : UIViewController <UITextFieldDelegate>
-
-@property (weak, nonatomic) id <ViewControllerCalcDelegate> delegate;
 
 @end
-

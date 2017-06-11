@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface CalculateSplitBill : NSObject
+@interface CalculateSplitBill : NSObject <ViewControllerCalcDelegate>
 
 -(NSString *)CalculateSplitBillWithAmount:(NSString *)billAmount andPeople:(double)people;
 

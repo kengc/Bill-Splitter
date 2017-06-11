@@ -30,7 +30,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.textBillTotal.delegate = self;
+    
+    
+    ///have to ask if this is this is the right way to set up a delegate via ViewController
     _calculateBill = [[CalculateSplitBill alloc] init];
+    self.delegate = _calculateBill;
 
 }
 
@@ -45,9 +49,9 @@
     _labelNumberofPeople.text = [NSString stringWithFormat:@"%0.f", self.sliderPeople.value];
     
     
-//    self.labelDividedAmount.text = [self.delegate CalculateSplitBillWithAmount:self.textBillTotal.text andPeople:self.sliderPeople.value];
+    self.labelDividedAmount.text = [self.delegate CalculateSplitBillWithAmount:self.textBillTotal.text andPeople:self.sliderPeople.value];
     
-    self.labelDividedAmount.text = [self.calculateBill CalculateSplitBillWithAmount:self.textBillTotal.text andPeople:self.sliderPeople.value];
+//    self.labelDividedAmount.text = [self.calculateBill CalculateSplitBillWithAmount:self.textBillTotal.text andPeople:self.sliderPeople.value];
     
 }
 - (IBAction)btnCalculateSpltAmount:(UIButton *)sender {

@@ -36,6 +36,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="BZs-hy-Q15"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="CalculateSplitAmount:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ktf-fO-cwg"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvr-p6-M67">
                                 <rect key="frame" x="165" y="171" width="46" height="30"/>
@@ -44,7 +47,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txh-rZ-Xj1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txh-rZ-Xj1">
                                 <rect key="frame" x="16" y="225" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="lSW-tR-Siq"/>
@@ -86,6 +89,7 @@
                     </view>
                     <connections>
                         <outlet property="labelDividedAmount" destination="Txh-rZ-Xj1" id="NVR-6i-ccR"/>
+                        <outlet property="labelNumberofPeople" destination="Oam-gk-cd5" id="UBe-Xi-ACJ"/>
                         <outlet property="sliderPeople" destination="5KD-9q-tkb" id="1aL-SW-O4f"/>
                         <outlet property="textBillTotal" destination="f6G-bk-t6e" id="Ic3-fH-mtO"/>
                     </connections>
